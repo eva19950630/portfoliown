@@ -29,6 +29,22 @@ section {
 	text-align: center;
 }
 
+.index-intro .intro-btn button {
+  margin: 15px 0 0 0;
+  width: 250px;
+  height: 50px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  background-color: #932534;
+  color: #fff;
+}
+
+.index-intro .intro-btn button:hover {
+  background-color: #932534;
+  color: #fff;
+  opacity: 0.9;
+}
+
 .index-intro .intro-arrow {
 	position: absolute;
 	bottom: 0;
@@ -172,7 +188,7 @@ section {
 }
 
 #albums li {
-  padding: 60px 15px 0 15px;
+  padding: 55px 15px 0 15px;
   display: inline-block;
 }
 
@@ -269,12 +285,20 @@ section {
 /* text titles */
 #albums h5 {
   margin: 0;
-  padding: 5px 0 0 0;
+  padding: 5px 0 5px 0;
   text-align: center;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1px;
   color: #222B31;
+}
+#albums h6 {
+  display: inline;
+  /*margin: 0 0 0 20px;*/
+  padding: 0 0 0 20px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #AAA;
 }
 
 
@@ -311,4 +335,12 @@ section {
   color: white;
   opacity: 0.7;
   text-decoration: none;
+}
+
+.footer-link:focus {
+  color: white;
+}
+
+.footer-name {
+  color: #a3bfc6 !important;
 }
