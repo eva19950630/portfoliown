@@ -13,3 +13,13 @@ $( "li" ).hover(
     })
   }
 );
+
+$(document).ready(function(){
+  $('#click-signup').click(function() {
+    $('#signup-modal').appendTo("body").modal('show');
+  });
+
+  $('#click-login').click(function() {
+    $('#login-modal').appendTo("body").modal('show');
+  });
+});

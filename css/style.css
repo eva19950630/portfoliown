@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya);
+
+html,
+head,
+body {
+  height: 100%;
+  background: white;
+  font-family: 'Alegreya', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}

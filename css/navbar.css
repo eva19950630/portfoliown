@@ -1,10 +1,16 @@
+/*navbar*/
+.portfoliown-navbar {
+  margin: 0 0 0 250px;
+}
+
 .navbar-inverse {
   background: #222B31 !important;
   /*border-bottom: 4px solid #9FA599 !important;*/
 }
 
 .navbar-brand {
-  font: 16px Lato !important;
+  /*font: 16px Lato !important;*/
+  font-size: 16px;
   text-transform: uppercase;
   color: #FFF !important;
   letter-spacing: 2px;
@@ -15,7 +21,8 @@
   margin-bottom: 0px;
 }
 .nav a {
-  font: 500 14px Lato;
+  /*font: 500 14px Lato;*/
+  font-size: 14px;
   letter-spacing: 2px;
   padding: 16px !important;
   color: #a3bfc6 !important;
@@ -62,10 +69,56 @@
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #FF7F50 !important;
+  background: #932534 !important;
   z-index: 0;
   opacity: 0;
 }
+
+
+.search-container {
+  width: 350px;
+  position: absolute;
+  display: block;
+  /*margin: 0 auto;*/
+  margin: 9px 0 0 -135px;
+}
+
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 35px;
+  padding: 0 20px;
+  font-size: 14px;
+  border: 1px solid #D0CFCE;
+  outline: none;
+}
+input#search-bar:focus {
+  border: 1px solid #932534;
+  transition: 0.35s ease;
+  color: #932534;
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -55px;
+  right: -10px;
+}
+
 
 @media (max-width: 767px) {
   .nav {
@@ -79,4 +132,100 @@
   .nav {
     padding-bottom: 20px;
   }
+}
+
+
+/*signup, login modal*/
+#signup-box {
+  position: relative;
+  margin: 25% auto;
+  width: 400px;
+  height: 450px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#login-box {
+  position: relative;
+  margin: 25% auto;
+  width: 400px;
+  height: 350px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  padding: 12px 40px;
+}
+
+.content .title {
+  margin: 0 0 35px 0;
+  border-bottom: 1px solid #932534;
+  padding: 0 0 5px 0;
+}
+
+.content .chtitle {
+  display: inline;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #932534;
+}
+
+.content .engtitle {
+  display: inline;
+  float: right;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 18px 0 0 0;
+  color: #AAA;
+}
+
+.content input[type="text"],
+.content input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  /*margin-bottom: 20px;*/
+  padding: 0 10px;
+  width: 320px;
+  height: 35px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+  outline: none;
+  border: 1px solid #AAA;
+}
+
+.content input[type="text"]:focus,
+.content input[type="password"]:focus {
+  border: 1px solid #932534;
+  transition: 0.35s ease;
+  color: #932534;
+}
+
+.content button {
+  margin: 15px 0 0 0;
+  width: 320px;
+  height: 55px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  background-color: #932534;
+  color: #fff;
+}
+
+.content button:hover {
+  background-color: #932534;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.input-icon {
+  position: relative;
+  float: right;
+  font-size: 17px;
+  top: -26px;
+  right: 12px;
 }

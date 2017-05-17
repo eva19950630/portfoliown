@@ -15,33 +15,312 @@
     <link rel="stylesheet" href="https://file.myfontastic.com/aR4fpYP5juQuaFcCLbzkFZ/icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- navbar css -->
     <link rel="stylesheet" href="css/navbar.css">
+    <!-- indexcontent css -->
+    <link rel="stylesheet" href="css/indexcontent.css">
+
 
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Portfoliown</a>
+        <div class="navbar-header portfoliown-navbar">
+            <div class="container">
+                <!-- Logo -->
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="">Portfoliown</a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <form class="search-container">
+                      <input type="text" id="search-bar" placeholder="Search Portfoliowns...">
+                      <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li><a href="" id="click-signup" data-toggle="modal">註冊</a><span class="hover"></span></li>
+                        <li><a href="" id="click-login" data-toggle="modal">登入</a><span class="hover"></span></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">註冊</a><span class="hover"></span></li>
-          <li><a href="#">登入</a><span class="hover"></span></li>
-        </ul>
-      </div>
-      </div>
     </nav>
-    
+
+    <!-- Sign up Modal -->
+    <div class="modal fade" id="signup-modal" role="dialog">
+        <div class="modal-dialog">
+            <div id="signup-box">
+                <div class="top" style="padding: 15px;">
+                    <button type="button" class="close" data-dismiss="modal" style="outline: 0; color: #222B31;"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <div class="chtitle">建立新帳號</div>
+                        <div class="engtitle">Create new account</div>
+                    </div>
+
+                    <input type="text" id="newaccount-bar" placeholder="使用者帳號"><i class="fa fa-user-o input-icon"></i>
+                    <input type="text" id="newemail-bar" placeholder="EMAIL"><i class="fa fa-envelope-o input-icon"></i>
+                    <input type="password" id="newpass-bar" placeholder="建立密碼"><i class="fa fa-key input-icon"></i>
+                    <input type="password" id="newretypepass-bar" placeholder="再次輸入密碼"><i class="fa fa-key input-icon"></i>
+                    
+                    <button type="button" class="btn btn-default">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Sign up Modal -->
+
+    <!-- Log in Modal -->
+    <div class="modal fade" id="login-modal" role="dialog">
+        <div class="modal-dialog">
+            <div id="login-box">
+                <div class="top" style="padding: 15px;">
+                    <button type="button" class="close" data-dismiss="modal" style="outline: 0; color: #222B31;"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <div class="chtitle">登入</div>
+                        <div class="engtitle">Welcome back</div>
+                    </div>
+
+                    <input type="text" id="email-bar" placeholder="輸入EMAIL"><i class="fa fa-envelope-o input-icon"></i>
+                    <input type="password" id="pass-bar" placeholder="輸入密碼"><i class="fa fa-key input-icon"></i>
+                    
+                    <button type="button" class="btn btn-default">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Log in Modal -->
+
+
+    <section class="section active" id="index-section" data-section="1">
+        <div class="index-intro">
+            <div class="intro-slogan">
+                Introduction
+            </div>
+            <div class="intro-btn">
+                <button type="button" class="btn btn-default">開始製作你的作品集吧</button>
+            </div>
+            <div class="intro-arrow">
+                <div class="mouse_scroll">
+                    <a href="#browse-section" data-smooth-scroll>
+                        <div>
+                            <span class="m_scroll_arrows unu"></span>
+                            <span class="m_scroll_arrows doi"></span>
+                            <span class="m_scroll_arrows trei"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>   
+        </div>
+    </section>
+
+    <section class="section" id="browse-section" data-section="2">
+        <div class="index-browse">
+            <div class="browse-title">
+                <h2><span>popular portfolios</span></h2>
+                <!-- <font style="font-size: 26px; font-weight: bold;">||</font>&ensp;
+                <font style="font-size: 24px;">popular portfolios</font>&ensp;
+                <font style="font-size: 26px; font-weight: bold;">||</font> -->
+            </div>
+            <div class="browse-rowalbums">
+                <ul id="albums">
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        </a>
+                        <h5>Arcade Fire</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                        </a>
+                        <h5>Viking Metal</h5>
+                    </li>
+                </ul><!-- end albums -->
+            </div>
+            <div class="browse-rowalbums">
+                <ul id="albums">
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        </a>
+                        <h5>Arcade Fire</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                        </a>
+                        <h5>Viking Metal</h5>
+                    </li>
+                </ul><!-- end albums -->
+            </div>
+            <div class="browse-rowalbums">
+                <ul id="albums">
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        </a>
+                        <h5>Arcade Fire</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                        </a>
+                        <h5>Viking Metal</h5>
+                    </li>
+                </ul><!-- end albums -->
+            </div>
+            <div class="browse-rowalbums">
+                <ul id="albums">
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        </a>
+                        <h5>Arcade Fire</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                        </a>
+                        <h5>Viking Metal</h5>
+                    </li>
+                </ul><!-- end albums -->
+            </div>
+            <div class="browse-rowalbums">
+                <ul id="albums">
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        </a>
+                        <h5>Arcade Fire</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/lz2pj8j" width="" height="" alt="" />
+                        </a>
+                        <h5>Movie Soundtracks</h5>
+                    </li>
+                    <li>
+                        <a href="" title="">
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
+                        </a>
+                        <h5>Viking Metal</h5>
+                    </li>
+                </ul><!-- end albums -->
+            </div>
+        </div>
+    </section>
+
+
 
 
 	<!-- ##### JAVASCRIPTS ##### -->
@@ -52,8 +331,14 @@
     <!-- materialize js -->
     <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 
+    <!-- index js -->
+    <script type="text/javascript" src="js/index.js"></script>
     <!-- navbar js -->
     <script type="text/javascript" src="js/navbar.js"></script>
+    <!-- scrollarrow js -->
+    <script type="text/javascript" src="js/scrollarrow.js"></script>
+    
+
 
 </body>
 
