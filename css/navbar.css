@@ -1,6 +1,6 @@
 /*navbar*/
 .portfoliown-navbar {
-  margin: 0 0 0 250px;
+  margin: 0 0 0 300px;
 }
 
 .navbar-inverse {
@@ -80,7 +80,7 @@
   position: absolute;
   display: block;
   /*margin: 0 auto;*/
-  margin: 9px 0 0 -135px;
+  margin: 9px 0 0 -120px;
 }
 
 input#search-bar {
