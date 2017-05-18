@@ -24,9 +24,9 @@
   /*font: 500 14px Lato;*/
   font-size: 14px;
   letter-spacing: 2px;
-  padding: 16px !important;
   color: #a3bfc6 !important;
   text-transform: uppercase;
+  padding: 16px !important;
   position: relative;
   z-index: 1000;
 }
@@ -134,6 +134,23 @@ input#search-bar:focus:-ms-placeholder {
   }
 }
 
+/*after login*/
+#user-pic {
+  border-radius: 60%;
+}
+
+#link-userpic {
+  padding: 0px !important;
+  margin: 10px 5px 0 10px;
+}
+
+#link-bell {
+  /*padding: 12px !important;*/
+  padding: 0px !important;
+  margin: 15px 0 0 20px;
+  font-size: 26px;
+}
+
 
 /*signup, login modal*/
 #signup-box {
@@ -220,6 +237,13 @@ input#search-bar:focus:-ms-placeholder {
   background-color: #932534;
   color: #fff;
   opacity: 0.9;
+  outline: 0;
+}
+
+.content button:focus {
+  background-color: #932534;
+  color: #fff;
+  outline: 0;
 }
 
 .input-icon {

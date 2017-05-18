@@ -156,6 +156,7 @@ section {
 .browse-title {
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  color: #932534;
 }
 
 .browse-title h2 {
@@ -174,7 +175,7 @@ section {
   display: block;
   height: 1px;
   width: 1000px;
-  background: black;
+  background: #932534;
   position: absolute;
   top: 50%;
 }
