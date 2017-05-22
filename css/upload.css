@@ -1,0 +1,11 @@
+.uploadport {
+	margin: 120px 0 0 350px;
+}
+
+
+/*content*/
+.uploadport-content li {
+	font-size: 15px;
+	letter-spacing: 1px;
+	padding: 15px 0;
+}

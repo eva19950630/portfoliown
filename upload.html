@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Portfoliown</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- materialize css -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/> -->
+    <!-- Icons Fonts -->
+    <link rel="stylesheet" href="icons-fonts/glyphicon-style.css">
+    <link rel="stylesheet" href="https://file.myfontastic.com/aR4fpYP5juQuaFcCLbzkFZ/icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="">-->
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- navbar css -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- indexcontent css -->
+    <link rel="stylesheet" href="css/indexcontent.css">
+    <!-- userportcontent css -->
+    <link rel="stylesheet" href="css/userportcontent.css">
+    <!-- upload css -->
+    <link rel="stylesheet" href="css/upload.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header portfoliown-navbar">
+            <div class="container">
+                <!-- Logo -->
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Portfoliown</a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <form class="search-container">
+                      <input type="text" id="search-bar" placeholder="Search Portfoliowns...">
+                      <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li class="afterlogin">
+                            <a href="" id="link-userpic"><img src="images/syuan.jpg" height="35" width="35" id="user-pic"></a>
+                        </li>
+                        <li class="afterlogin">
+                            <a href="" id="link-bell"><i class="fa fa-bell"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="uploadport">
+        <div class="subitem-title"><h4>|&ensp;上傳新作品</h4>&emsp;<h5>Upload new Portfolio</h5><h4>&ensp;|</h4></div>
+        <div class="uploadport-content">
+            <ul>
+                <li>作品集名稱：<input type="text" id="newportname-bar" placeholder="輸入作品集名稱" required></li>
+                <li>作品時間：</li>
+                <li>
+                    作品類型：
+                    <select>
+                      <option value="painting">繪畫作品</option>
+                      <option value="photo">攝影照片</option>
+                    </select>
+                </li>
+                <li>作品描述：</li>
+                    <textarea>12345</textarea>
+                <li>上傳照片：</li>
+            </ul>
+
+            <button type="button" class="btn btn-default">上傳作品集</button>
+        </div>
+    </div>
+
+
+    <!-- ##### JAVASCRIPTS ##### -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- materialize js -->
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+    <!-- index js -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- navbar js -->
+    <script type="text/javascript" src="js/navbar.js"></script>
+
+
+</body>
+
+</html>
