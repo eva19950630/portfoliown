@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- materialize css -->
     <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/> -->
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Icons Fonts -->
     <link rel="stylesheet" href="icons-fonts/glyphicon-style.css">
     <link rel="stylesheet" href="https://file.myfontastic.com/aR4fpYP5juQuaFcCLbzkFZ/icons.css">
@@ -27,6 +29,13 @@
     <link rel="stylesheet" href="css/userportcontent.css">
     <!-- upload css -->
     <link rel="stylesheet" href="css/upload.css">
+
+    <!-- jquery ui: datepicker no calendar -->
+    <style type="text/css">
+        .ui-datepicker-calendar {
+            display: none;
+        }
+    </style>
 
 </head>
 
@@ -68,24 +77,132 @@
     </nav>
 
     <div class="uploadport">
-        <div class="subitem-title"><h4>|&ensp;上傳新作品</h4>&emsp;<h5>Upload new Portfolio</h5><h4>&ensp;|</h4></div>
+        <div class="subitem-title"><h4>|&ensp;上傳新作品集</h4>&emsp;<h5>Upload new Portfolio</h5><h4>&ensp;|</h4></div>
         <div class="uploadport-content">
             <ul>
-                <li>作品集名稱：<input type="text" id="newportname-bar" placeholder="輸入作品集名稱" required></li>
-                <li>作品時間：</li>
                 <li>
-                    作品類型：
+                    <font class="uploadtitle">作品集名稱：</font>
+                    <input type="text" id="newportname-bar" placeholder="輸入作品集名稱" required></li>
+                <li>
+                    <font class="uploadtitle">作品時間：</font>
+                    <input type="text" id="datepicker" placeholder="點選選擇時間" required>
+                </li>
+                <li>
+                    <font class="uploadtitle">作品類型：</font>
                     <select>
                       <option value="painting">繪畫作品</option>
                       <option value="photo">攝影照片</option>
                     </select>
                 </li>
-                <li>作品描述：</li>
+                <li>
+                    <font class="uploadtitle">作品描述：</font>
+                </li>
                     <textarea>12345</textarea>
-                <li>上傳照片：</li>
+                <li>
+                    <font class="uploadtitle">上傳照片：</font>&ensp;
+                    <font color="#932534" style="font-size: 12px; letter-spacing: 1.5px;">〔 請點選想要的照片做為作品集封面 〕</font>
+                    <form class="uploadimage-form">
+                        <div id="image-row">
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage1">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage2">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage3">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="image-row">
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage4">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage5">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                            <div class="image-upload">
+                                <div class="image-choose">
+                                    <input type="radio" name="portimage" value="pimage6">
+                                </div>
+                                <div class="image-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload"></label>
+                                </div>
+                                <div class="image-preview">
+                                    <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                </div>
+                                <div class="image-intro">
+                                    <input type="text" id="newimageintro-bar" placeholder="輸入照片描述" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="introplus">〔 按 + 可再新增 3 張照片 〕</div>
+                        <a href="#" class="center-circle imageupload" id="imageupload-link">+</a>
+                    </form>
+                </li>
             </ul>
-
-            <button type="button" class="btn btn-default">上傳作品集</button>
+            <hr width="70%" style="margin: 30px 0 10px 0;">
+            <button type="button" class="btn btn-default uploadportfile-btn">上傳作品集</button>
         </div>
     </div>
 
@@ -93,6 +210,7 @@
     <!-- ##### JAVASCRIPTS ##### -->
     <!-- jQuery Library -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap js -->
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- materialize js -->
@@ -102,6 +220,23 @@
     <script type="text/javascript" src="js/index.js"></script>
     <!-- navbar js -->
     <script type="text/javascript" src="js/navbar.js"></script>
+    <!-- imageupload js -->
+    <script type="text/javascript" src="js/imageupload.js"></script>
+
+    <!-- jquery ui: datepicker -->
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'MM yy',
+                onClose: function(dateText, inst) { 
+                    $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                }
+            });
+        });
+    </script>
 
 
 </body>

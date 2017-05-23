@@ -3,6 +3,31 @@
 }
 
 
+/*subitem title*/
+.subitem-title {
+	margin: 0 0 30px 0;
+}
+
+.subitem-title h4 {
+	display: inline;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #932534;
+}
+
+.subitem-title h5 {
+	display: inline;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	color: #AAA;
+}
+
+#managecontent .subitem-title {
+	margin: 40px 0 40px 0;
+}
+
+
 /*top: image, experience*/
 #managetop, #managecontent {
 	margin: 0 0 0 350px;
@@ -28,7 +53,7 @@
 	padding: 10px 0 25px 0;
 	text-align: center;
 	font-size: 14px;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	color: #AAA;
 }
 
@@ -58,29 +83,27 @@
 	color: #222B31;
 }
 
-
-/*subitem title*/
-.subitem-title {
-	margin: 0 0 30px 0;
-}
-
-.subitem-title h4 {
-	display: inline;
-	font-size: 22px;
-	font-weight: 700;
+.updateprofile-btn {
+	margin: 0 0 10px 45vw;
+	width: 150px;
+	height: 40px;
+	font-size: 15px;
 	letter-spacing: 2px;
-	color: #932534;
+	background-color: #932534;
+	color: #fff;
 }
 
-.subitem-title h5 {
-	display: inline;
-	font-size: 16px;
-	letter-spacing: 1.5px;
-	color: #AAA;
+.updateprofile-btn:hover {
+	background-color: #932534;
+	color: #fff;
+	opacity: 0.9;
+	outline: 0;
 }
 
-#managecontent .subitem-title {
-	margin: 40px 0 40px 0;
+.updateprofile-btn:focus {
+	background-color: #932534;
+	color: #fff;
+	outline: 0;
 }
 
 
@@ -149,9 +172,9 @@
 .center-circle {
 	background: #932534; /* Old browsers */
 	display: inline-block;
+	position: fixed;
 	width: 60px;
 	height: 60px;
-	position: fixed;
 	bottom: 30px;
 	right: 30px;
 	border-radius: 50%;
