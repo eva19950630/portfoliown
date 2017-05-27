@@ -13,7 +13,9 @@
 .uploadtitle {
 	font-weight: 600;
 }
-.uploadport-content #newportname-bar {
+.uploadport-content #newportname-bar,
+.uploadport-content #datepicker,
+.uploadport-content #newportclass-select {
 	padding: 0 10px;
 	width: 250px;
 	height: 30px;
@@ -24,12 +26,29 @@
 	outline: none;
 	border: 1px solid #AAA;
 }
-.uploadport-content #newportname-bar:focus {
-  border: 1px solid #932534;
-  transition: 0.35s ease;
-  color: #932534;
+.uploadport-content #newportname-bar:focus,
+.uploadport-content #datepicker:focus,
+.uploadport-content #newportclass-select:focus {
+	border: 1px solid #932534;
+	transition: 0.35s ease;
+	color: #932534;
 }
-
+.uploadport-content #newportinfo-textarea {
+	padding: 5px 10px;
+	width: 720px;
+	height: 60px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	transition: 0.2s ease;
+	outline: none;
+	border: 1px solid #AAA;
+}
+.uploadport-content #newportinfo-textarea:focus {
+	border: 1px solid #932534;
+	transition: 0.35s ease;
+	color: #932534;
+}
 
 /*image upload*/
 .uploadimage-form {
