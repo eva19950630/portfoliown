@@ -50,6 +50,7 @@
 	color: #932534;
 }
 
+
 /*image upload*/
 .uploadimage-form {
 	/*background-color: #ff0000;*/
@@ -127,6 +128,22 @@
 }
 .image-intro {
 	margin: 15px 0 0 30px;
+}
+#newimageintro-bar {
+	padding: 0 10px;
+	width: 160px;
+	height: 30px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	transition: 0.2s ease;
+	outline: none;
+	border: 1px solid #AAA;
+}
+#newimageintro-bar:focus {
+	border: 1px solid #932534;
+	transition: 0.35s ease;
+	color: #932534;
 }
 
 

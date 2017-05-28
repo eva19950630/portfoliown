@@ -71,7 +71,16 @@
         <ul id="managetop">
             <li>
                 <div class="manage-image">
-                    <img src="images/syuan.jpg" height="160" width="160" id="user-pic">
+                    <!-- <img src="images/syuan.jpg" height="160" width="160" id="user-pic"> -->
+                    <div class="userpic-upload">
+                        <div class="userpic-edit">
+                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                            <label for="imageUpload"></label>
+                        </div>
+                        <div class="userpic-preview">
+                            <div id="imagePreview" style="background-image: url(images/syuan.jpg);"></div>
+                        </div>
+                    </div>
                     <h5 class="manage-username">SyuanShih</h5>
                     <h6 class="manage-userwork">|&ensp;A Programmer&ensp;|</h6>
                 </div>
@@ -80,22 +89,24 @@
                 <div class="manage-experience">
                     <div class="subitem-title"><h4>|&ensp;經歷</h4>&emsp;<h5>Experience</h5><h4>&ensp;|</h4></div>
                     <div class="experi-content" id="design-scrollbar">
-                        <h5>1&emsp;哈哈</h5>
-                        <h5>2&emsp;呵呵</h5>
-                        <h5>3&emsp;嘻嘻</h5>
-                        <h5>4&emsp;顆顆</h5>
-                        <h5>5&emsp;嘿嘿</h5>
-                        <h5>6&emsp;哈哈</h5>
-                        <h5>7&emsp;呵呵</h5>
-                        <h5>8&emsp;嘻嘻</h5>
-                        <h5>9&emsp;顆顆</h5>
-                        <h5>10&emsp;嘿嘿</h5>
+                        <h5>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</h5>
+                        <h5>呵呵</h5>
+                        <h5>嘻嘻</h5>
+                        <h5>顆顆</h5>
+                        <h5>嘿嘿</h5>
+                        <h5>哈哈</h5>
+                        <h5>呵呵</h5>
+                        <h5>嘻嘻</h5>
+                        <h5>顆顆</h5>
+                        <h5>嘿嘿</h5>
                     </div>
                 </div>
             </li>
         </ul>
+        
         <button type="button" class="btn btn-default updateprofile-btn">更新個人資料</button>
         <hr width="70%">
+        
         <div id="managecontent">
             <div class="subitem-title"><h4>|&ensp;你的作品集</h4>&emsp;<h5>Portfolio</h5><h4>&ensp;|</h4></div>
             <div class="userportfolio-content" id="design-scrollbar">
@@ -246,6 +257,8 @@
     <script type="text/javascript" src="js/index.js"></script>
     <!-- navbar js -->
     <script type="text/javascript" src="js/navbar.js"></script>
+    <!-- imageupload js -->
+    <script type="text/javascript" src="js/imageupload.js"></script>
 
 
 </body>
