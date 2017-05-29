@@ -15,4 +15,11 @@ $("#imageUpload").change(function() {
 });
 
 
+/*click plus btn*/
+$(document).ready(function(){
+    $('#click-addimages').click(function() {
+        $('#addimages-modal').appendTo("body").modal('show');
+    });
+});
+
 /*add 3 new images row*/

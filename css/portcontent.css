@@ -9,7 +9,7 @@
 	margin: -230px 0 0 40px;
 }
 .portintro-content h5 {
-	margin: 5px 0 8px 25px;
+	margin: 5px 0 5px 25px;
 	font-size: 15px;
 	letter-spacing: 1.5px;
 	line-height: 25px;
@@ -21,10 +21,10 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	border: 1px solid #222B31;
-	margin: -30px 0 0 80px;
+	margin: -25px 0 0 80px;
+	padding: 0 0 0 5px;
 	width: 400px;
 	height: 80px;
-	padding: 0 0 0 5px;
 	font-size: 14px;
 	letter-spacing: 1.5px;
 	word-break: break-all;
@@ -52,6 +52,7 @@
 	outline: 0;
 }
 
+
 /*content: images*/
 .manageportcontent {
 	margin: 40px 0 50px 330px;
@@ -78,4 +79,56 @@
 	font-size: 15px;
 	letter-spacing: 1px;
 	color: #222B31;
+}
+
+
+/*addimages modal*/
+#addimages-box {
+	position: relative;
+	margin: 5% auto;
+	width: 550px;
+	height: 660px;
+	background: #FFF;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.newimageupload {
+	/*background-color: #AAA;*/
+	width: 460px;
+	height: 450px;
+	max-height: calc(220vh - 250px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.image-upload.addimages {
+	max-width: 200px;
+	margin: 10px 0 5px 30px;
+}
+.image-upload.addimages .image-preview {
+	margin: 0;
+}
+.image-upload.addimages .image-intro {
+	margin: 10px 0 0 0;
+}
+
+.content.addimages button {
+	margin: 25px 0 10px 170px;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	letter-spacing: 2px;
+	background-color: #932534;
+	color: #fff;
+}
+.content.addimages button:hover {
+	background-color: #932534;
+	color: #fff;
+	opacity: 0.9;
+	outline: 0;
+}
+.content.addimages button:focus {
+	background-color: #932534;
+	color: #fff;
+	outline: 0;
 }

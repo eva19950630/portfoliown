@@ -33,7 +33,7 @@
 	margin: 0 0 0 350px;
 }
 
-#managetop li {
+ul#managetop li {
 	padding: 0 15px 0 0;
 	display: inline-block;
 }
@@ -136,8 +136,14 @@
 	/*box-shadow: 0px 4px 15px #444;*/
 }
 
-.experi-content h5 {
-	margin: 10px 0 10px 25px;
+ul#experilist {
+	list-style: decimal;
+}
+
+ul#experilist li {
+	display: list-item;
+	padding-left: 1em;
+	margin: 10px 0 10px 0;
 	/*padding: 5px 0;*/
 	font-size: 15px;
 	/*font-weight: 600;*/

@@ -5,6 +5,9 @@
 
 
 /*content*/
+ul#uploadlist {
+	list-style-type: square;
+}
 .uploadport-content li {
 	font-size: 15px;
 	letter-spacing: 2px;
@@ -126,7 +129,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.image-intro {
+.image-upload .image-intro {
 	margin: 15px 0 0 30px;
 }
 #newimageintro-bar {
