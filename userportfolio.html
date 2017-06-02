@@ -106,7 +106,44 @@
             </li>
         </ul>
         
-        <button type="button" class="btn btn-default updateprofile-btn">更新個人資料</button>
+        <a href="" id="click-updateuserinfo" data-toggle="modal"><button type="button" class="btn btn-default updateprofile-btn">更新個人資料</button></a>
+
+        <!-- Update userinfo Modal -->
+        <div class="modal fade" id="updateuserinfo-modal" role="dialog">
+            <div class="modal-dialog">
+                <div id="updateuserinfo-box">
+                    <div class="top" style="padding: 15px;">
+                        <button type="button" class="close" data-dismiss="modal" style="outline: 0; color: #222B31;"><i class="fa fa-times"></i></button>
+                    </div>
+
+                    <div class="content updateuserinfo">
+                        <div class="subitem-title"><h4>|&ensp;更新個人資料</h4>&emsp;<h5>Update User Information</h5><h4>&ensp;|</h4></div>
+                        <div class="updateuserinfo-content">
+                            <ul id="updateuserinfolist">
+                                <li>
+                                    <font class="uploadtitle">使用者名稱：</font>
+                                    <input type="text" id="newusername-bar" placeholder="輸入使用者名稱" required>
+                                </li>
+                                <li>
+                                    <font class="uploadtitle">工作：</font>
+                                    <input type="text" id="newuserwork-bar" placeholder="輸入工作" required>
+                                </li>
+                                <li>
+                                    <font class="uploadtitle">經歷：</font>
+                                </li>
+                                    <textarea id="newuserexp-textarea" placeholder="輸入經歷">
+                                        
+                                    </textarea>
+                            </ul>
+                            <button type="button" class="btn btn-default updateuserinfo-btn">更新個人資料</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
         <hr width="70%">
         
         <div id="managecontent">

@@ -266,3 +266,71 @@ ul#experilist li {
 	color: #fff;
 	text-decoration: none;
 }
+
+
+/*update userinfo modal*/
+#updateuserinfo-box {
+	position: relative;
+	margin: 20% auto;
+	width: 600px;
+	height: 500px;
+	background: #FFF;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+ul#updateuserinfolist {
+	list-style-type: square;
+}
+ul#updateuserinfolist li {
+	font-size: 15px;
+	letter-spacing: 2px;
+	padding: 10px 0;
+}
+ul#updateuserinfolist li .uploadtitle+input {
+	display: inline;
+}
+.uploadtitle {
+	font-weight: 600;
+}
+.updateuserinfo-content #newusername-bar,
+.updateuserinfo-content #newuserwork-bar {
+	padding: 0 10px;
+	width: 150px;
+	height: 30px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	transition: 0.2s ease;
+	outline: none;
+	border: 1px solid #AAA;
+}
+.updateuserinfo-content #newusername-bar:focus,
+.updateuserinfo-content #newuserwork-bar:focus {
+	border: 1px solid #932534;
+	transition: 0.35s ease;
+	color: #932534;
+}
+.updateuserinfo-content #newuserexp-textarea {
+	padding: 5px 10px;
+	width: 430px;
+	height: 150px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	transition: 0.2s ease;
+	outline: none;
+	border: 1px solid #AAA;
+	max-height: calc(100vh - 250px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.updateuserinfo-content #newuserexp-textarea:focus {
+	border: 1px solid #932534;
+	transition: 0.35s ease;
+	color: #932534;
+}
+.content.updateuserinfo button {
+	width: 170px;
+	height: 45px;
+	margin: 20px 0 20px 170px;
+}
