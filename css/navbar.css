@@ -223,7 +223,7 @@ input#search-bar:focus:-ms-placeholder {
   color: #932534;
 }
 
-.content button {
+.content input[type="submit"] {
   margin: 15px 0 0 0;
   width: 320px;
   height: 55px;
@@ -233,14 +233,14 @@ input#search-bar:focus:-ms-placeholder {
   color: #fff;
 }
 
-.content button:hover {
+.content input[type="submit"]:hover {
   background-color: #932534;
   color: #fff;
   opacity: 0.9;
   outline: 0;
 }
 
-.content button:focus {
+.content input[type="submit"]:focus {
   background-color: #932534;
   color: #fff;
   outline: 0;

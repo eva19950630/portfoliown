@@ -78,13 +78,13 @@
                         <div class="chtitle">建立新帳號</div>
                         <div class="engtitle">Create new account</div>
                     </div>
-
-                    <input type="text" id="newaccount-bar" placeholder="使用者帳號" required><i class="fa fa-user-o input-icon"></i>
-                    <input type="text" id="newemail-bar" placeholder="EMAIL" required><i class="fa fa-envelope-o input-icon"></i>
-                    <input type="password" id="newpass-bar" placeholder="建立密碼" required><i class="fa fa-key input-icon"></i>
-                    <input type="password" id="newretypepass-bar" placeholder="再次輸入密碼" required><i class="fa fa-key input-icon"></i>
-                    
-                    <button type="button" class="btn btn-default">註冊</button>
+                    <form name="form" method="post" action="register_finish.php">
+                        <input type="text" id="newaccount-bar" placeholder="使用者帳號" required><i class="fa fa-user-o input-icon"></i>
+                        <input type="text" id="newemail-bar" placeholder="EMAIL" required><i class="fa fa-envelope-o input-icon"></i>
+                        <input type="password" id="newpass-bar" placeholder="建立密碼" required><i class="fa fa-key input-icon"></i>
+                        <input type="password" id="newretypepass-bar" placeholder="再次輸入密碼" required><i class="fa fa-key input-icon"></i>
+                        <input type="submit" name="button" value="註冊" class="btn btn-default"/>
+                    </form>
                 </div>
             </div>
         </div>
