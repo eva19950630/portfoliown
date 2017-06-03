@@ -105,7 +105,7 @@ if ($_SESSION['email'] != null) {
         <div class="subitem-title"><h4>|&ensp;上傳新作品集</h4>&emsp;<h5>Upload new Portfolio</h5><h4>&ensp;|</h4></div>
         <div class="uploadport-content">
             <ul id="uploadlist">
-                <form name="form" method="post" action="uploadport_finish.php">
+                <form name="form" method="get" action="uploadport_finish.php">
                     <li>
                         <font class="uploadtitle">作品集名稱：</font>
                         <input type="text" id="newportname-bar" name="newportname" placeholder="輸入作品集名稱" required>
@@ -117,8 +117,8 @@ if ($_SESSION['email'] != null) {
                     <li>
                         <font class="uploadtitle">作品集類型：</font>
                         <select id="newportclass-select" name="newportclass">
-                          <option value="painting">繪畫作品</option>
-                          <option value="photo">攝影照片</option>
+                          <option value="繪畫作品">繪畫作品</option>
+                          <option value="攝影照片">攝影照片</option>
                         </select>
                     </li>
                     <li>

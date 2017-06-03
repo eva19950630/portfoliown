@@ -188,7 +188,7 @@ section {
   right: -1010px;
 }
 
-#albums {
+.indexalbums {
   width: 65vw;
   /*background-color: #000;*/
 }

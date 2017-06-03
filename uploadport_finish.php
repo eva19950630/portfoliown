@@ -5,10 +5,10 @@
 <?php
 include("db_connect.inc.php");
 
-$portname = $_POST['newportname'];
-$porttime = $_POST['newporttime'];
-$portclass = $_POST['newportclass'];
-$portintro = $_POST['newportintro'];
+$portname = $_GET['newportname'];
+$porttime = $_GET['newporttime'];
+$portclass = $_GET['newportclass'];
+$portintro = $_GET['newportintro'];
 
 // echo $portname;
 // echo $porttime;

@@ -97,8 +97,22 @@ if ($_SESSION['email'] != null) {
     </nav>
 
 <?php
+$sql = "SELECT * FROM portfolio_table";
+$result = mysqli_query($Link, $sql);
+$rowscount = mysqli_num_rows($result);
 
+for ($i = 0; $i < $rowscount; $i++) {
+    $row = mysqli_fetch_row($result);
 
+    $user_id = $row[7];
+    if ($user_id != 0) {
+        $sql2 = "SELECT * FROM user_table where user_id='$user_id'";
+        $result2 = mysqli_query($Link, $sql2);
+        $rowscount2 = mysqli_num_rows($result2);
+        for ($j = 0; $j < $rowscount2; $j++)
+            $row2 = mysqli_fetch_row($result2);
+    }
+}
 ?>
 
     <div class="portcontent-manage">
@@ -111,7 +125,7 @@ if ($_SESSION['email'] != null) {
                             <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
                             <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
                         </a>
-                        <h5 style="font-size: 20px; letter-spacing: 2px;">Arcade Fire</h5>
+                        <h5 style="font-size: 20px; letter-spacing: 2px;"><?php echo $row[1] ?></h5>
                     </li>
                 </ul>
             </li>
@@ -119,13 +133,11 @@ if ($_SESSION['email'] != null) {
                 <div class="portcontent-intro">
                     <div class="subitem-title"><h4>|&ensp;作品集介紹</h4>&emsp;<h5>Introduction</h5><h4>&ensp;|</h4></div>
                     <div class="portintro-content">
-                        <h5><b>作者</b>&ensp;|&ensp;SyuanShih</h5>
-                        <h5><b>時間</b>&ensp;|&ensp;2017 / 5</h5>
-                        <h5><b>類型</b>&ensp;|&ensp;繪畫作品</h5>
+                        <h5><b>作者</b>&ensp;|&ensp;<?php echo $row2[1] ?></h5>
+                        <h5><b>時間</b>&ensp;|&ensp;<?php echo $row[2] ?></h5>
+                        <h5><b>類型</b>&ensp;|&ensp;<?php echo $row[3] ?></h5>
                         <h5><b>描述</b>&ensp;|&ensp;</h5>
-                        <div class="port-intro" id="design-scrollbar">
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                        </div>
+                        <div class="port-intro" id="design-scrollbar"><?php echo $row[4] ?></div>
                     </div>
                 </div>
             </li>

@@ -187,7 +187,7 @@ $rowscount = mysqli_num_rows($result);
                     <h2><span>popular portfolio</span></h2>
                 </div>
                 <div class="browse-rowalbums">
-                    <ul id="albums">
+                    <ul id="albums" class="indexalbums">
                         <?php 
                             for ($i = 0; $i < $rowscount; $i++) {
                                 $row = mysqli_fetch_row($result);
