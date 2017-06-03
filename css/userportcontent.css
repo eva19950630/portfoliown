@@ -137,13 +137,13 @@ ul#managetop li {
 }
 
 ul#experilist {
-	list-style: decimal;
+	/*list-style: decimal;*/
 }
 
 ul#experilist li {
-	display: list-item;
-	padding-left: 1em;
-	margin: 10px 0 10px 0;
+	/*display: list-item;*/
+	/*padding-left: 1em;*/
+	margin: 10px 0 10px -15px;
 	/*padding: 5px 0;*/
 	font-size: 15px;
 	/*font-weight: 600;*/
@@ -271,9 +271,9 @@ ul#experilist li {
 /*update userinfo modal*/
 #updateuserinfo-box {
 	position: relative;
-	margin: 20% auto;
+	margin: 5% auto;
 	width: 600px;
-	height: 500px;
+	height: 680px;
 	background: #FFF;
 	border-radius: 2px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -284,16 +284,20 @@ ul#updateuserinfolist {
 ul#updateuserinfolist li {
 	font-size: 15px;
 	letter-spacing: 2px;
-	padding: 10px 0;
+	padding: 8px 0;
 }
 ul#updateuserinfolist li .uploadtitle+input {
 	display: inline;
 }
+.userpic-upload.update {
+	left: 28%;
+	margin: 0 0 8px 0;
+}
 .uploadtitle {
 	font-weight: 600;
 }
-.updateuserinfo-content #newusername-bar,
-.updateuserinfo-content #newuserwork-bar {
+.updateuserinfo-content input[type="text"],
+.updateuserinfo-content input[type="password"] {
 	padding: 0 10px;
 	width: 150px;
 	height: 30px;
@@ -304,33 +308,37 @@ ul#updateuserinfolist li .uploadtitle+input {
 	outline: none;
 	border: 1px solid #AAA;
 }
-.updateuserinfo-content #newusername-bar:focus,
-.updateuserinfo-content #newuserwork-bar:focus {
+.updateuserinfo-content input[type="text"]:focus,
+.updateuserinfo-content input[type="password"]:focus {
 	border: 1px solid #932534;
 	transition: 0.35s ease;
 	color: #932534;
 }
-.updateuserinfo-content #newuserexp-textarea {
+#newuserwork-bar {
+	width: 200px;
+}
+.updateuserinfo-content textarea {
 	padding: 5px 10px;
 	width: 430px;
-	height: 150px;
+	height: 120px;
 	font-weight: 400;
 	font-size: 14px;
 	letter-spacing: 1.5px;
 	transition: 0.2s ease;
 	outline: none;
 	border: 1px solid #AAA;
-	max-height: calc(100vh - 250px);
+	/*max-height: calc(100vh - 250px);
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: auto;*/
 }
-.updateuserinfo-content #newuserexp-textarea:focus {
+.updateuserinfo-content textarea:focus {
 	border: 1px solid #932534;
 	transition: 0.35s ease;
 	color: #932534;
 }
-.content.updateuserinfo button {
-	width: 170px;
-	height: 45px;
-	margin: 20px 0 20px 170px;
+.updateuserinfo-content input[type="submit"] {
+	width: 150px;
+	height: 40px;
+	margin: 12px 0 10px 140px;
+	font-size: 15px;
 }

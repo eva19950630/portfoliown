@@ -57,7 +57,7 @@ ul#uploadlist {
 /*image upload*/
 .uploadimage-form {
 	/*background-color: #ff0000;*/
-	width: 50vw;
+	width: 55vw;
 }
 .image-upload {
 	position: relative;
@@ -171,7 +171,7 @@ ul#uploadlist {
 
 /*uploadportfolio button*/
 .uploadportfile-btn {
-	margin: 20px 0 50px 20.5vw;
+	margin: 20px 0 50px 18vw;
 	width: 180px;
 	height: 50px;
 	font-size: 17px;

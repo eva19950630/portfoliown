@@ -1,0 +1,19 @@
+[03-Jun-2017 11:13:30 Asia/Taipei] PHP Parse error:  syntax error, unexpected '"haha"' (T_CONSTANT_ENCAPSED_STRING) in D:\TWAMPd\htdocs\portfoliown\register_finish.php on line 14
+[03-Jun-2017 14:35:46 Asia/Taipei] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at D:\TWAMPd\htdocs\portfoliown\userportfolio.php:88) in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 88
+[03-Jun-2017 14:35:46 Asia/Taipei] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_num_row() in D:\TWAMPd\htdocs\portfoliown\userportfolio.php:95
+Stack trace:
+#0 {main}
+  thrown in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 95
+[03-Jun-2017 14:36:27 Asia/Taipei] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at D:\TWAMPd\htdocs\portfoliown\userportfolio.php:88) in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 88
+[03-Jun-2017 14:36:27 Asia/Taipei] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_num_row() in D:\TWAMPd\htdocs\portfoliown\userportfolio.php:95
+Stack trace:
+#0 {main}
+  thrown in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 95
+[03-Jun-2017 14:37:34 Asia/Taipei] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_num_row() in D:\TWAMPd\htdocs\portfoliown\userportfolio.php:97
+Stack trace:
+#0 {main}
+  thrown in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 97
+[03-Jun-2017 14:49:48 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\userlogout.php on line 10
+[03-Jun-2017 20:19:55 Asia/Taipei] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 22
+[03-Jun-2017 21:46:53 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'afterlogin' (T_STRING), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\index.php on line 64
+[03-Jun-2017 21:48:56 Asia/Taipei] PHP Parse error:  syntax error, unexpected '" id=\"click-signup\" data-tog' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\index.php on line 75

@@ -1,3 +1,8 @@
+<?php
+session_start(); 
+include("db_connect.inc.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +47,20 @@
 </head>
 
 <body>
+
+<?php
+if ($_SESSION['email'] != null) {
+    $email = $_SESSION['email'];
+
+    $sql = "SELECT * FROM user_table where email='$email'";
+    $result = mysqli_query($Link, $sql);
+    $rowscount = mysqli_num_rows($result);
+
+    for ($i = 0; $i < $rowscount; $i++)
+        $row = mysqli_fetch_row($result);
+}
+?>
+
     <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header portfoliown-navbar">
@@ -54,7 +73,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Portfoliown</a>
+                    <a class="navbar-brand" href="index.php">PORTFOLIOWN</a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <form class="search-container">
@@ -66,10 +85,16 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
                         <li class="afterlogin">
-                            <a href="userportfolio.html" id="link-userpic"><img src="images/syuan.jpg" height="35" width="35" id="user-pic"></a>
+                            <a href="userportfolio.php" id="link-userpic">
+                                <img src="images/syuan.jpg" height="35" width="35" id="user-pic">
+                                <font class="username" style="margin: 0 0 0 5px;"><?php echo $row[1] ?></font>
+                            </a>
                         </li>
-                        <li class="afterlogin">
+                        <!-- <li class="afterlogin">
                             <a href="" id="link-bell"><i class="fa fa-bell"></i></a>
+                        </li> -->
+                        <li class="afterlogin">
+                            <a href="userlogout.php">登出</a><span class="hover"></span>
                         </li>
                       </ul>
                     </div>
