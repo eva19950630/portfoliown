@@ -31,11 +31,16 @@ if ($_SESSION['email'] != null && $portname != null && $porttime != null && $por
 	if (mysqli_query($Link, $newport)) {
 		$message = "新增作品集成功!";
 		$url = "portcontent.php";
+		// printf("%d", mysqli_insert_id($Link));
+		// echo mysqli_insert_id($Link);
+		// $_SESSION['newportid'] = mysqli_insert_id($Link);
 	} else {
+		// echo "1";
 		$message = "新增作品集失敗!";
 		$url = "userportfolio.php";
 	}
 } else {
+	// echo "2";
 	$message = "新增作品集失敗!";
 	$url = "userportfolio.php";
 }

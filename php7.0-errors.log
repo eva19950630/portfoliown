@@ -17,3 +17,10 @@ Stack trace:
 [03-Jun-2017 20:19:55 Asia/Taipei] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 22
 [03-Jun-2017 21:46:53 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'afterlogin' (T_STRING), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\index.php on line 64
 [03-Jun-2017 21:48:56 Asia/Taipei] PHP Parse error:  syntax error, unexpected '" id=\"click-signup\" data-tog' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\index.php on line 75
+[04-Jun-2017 10:57:53 Asia/Taipei] PHP Deprecated:  mysql_insert_id(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 34
+[04-Jun-2017 10:59:23 Asia/Taipei] PHP Parse error:  syntax error, unexpected '%' in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 34
+[04-Jun-2017 10:59:56 Asia/Taipei] PHP Deprecated:  mysql_insert_id(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 34
+[04-Jun-2017 11:01:07 Asia/Taipei] PHP Warning:  mysqli_insert_id() expects exactly 1 parameter, 0 given in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 34
+[04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fopen(): Filename cannot be empty in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 8
+[04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fread() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 9
+[04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 10

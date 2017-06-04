@@ -1,6 +1,12 @@
 <?php
 session_start(); 
 include("db_connect.inc.php");
+
+// $newportid = $_SESSION['newportid'];
+// echo $newportid;
+
+// echo "<script type='text/javascript'>alert('$newportid');</script>";
+
 ?>
 
 <!DOCTYPE html>
@@ -143,7 +149,7 @@ for ($i = 0; $i < $rowscount; $i++) {
             </li>
         </ul>
 
-        <a href="updateportinfo.html" target="_blank"><button type="button" class="btn btn-default updateportinfo-btn">更新作品集資訊</button></a>
+        <a href="updateportinfo.php" target="_blank"><button type="button" class="btn btn-default updateportinfo-btn">更新作品集資訊</button></a>
 
         <div class="manageportcontent" id="design-scrollbar">
             <ul id="portcontent-images">

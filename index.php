@@ -189,17 +189,17 @@ $rowscount = mysqli_num_rows($result);
                 <div class="browse-rowalbums">
                     <ul id="albums" class="indexalbums">
                         <?php 
-                            for ($i = 0; $i < $rowscount; $i++) {
-                                $row = mysqli_fetch_row($result);
+                        for ($i = 0; $i < 8; $i++) {
+                            $row = mysqli_fetch_row($result);
 
-                                $user_id = $row[7];
-                                if ($user_id != 0) {
-                                    $sql2 = "SELECT * FROM user_table where user_id='$user_id'";
-                                    $result2 = mysqli_query($Link, $sql2);
-                                    $rowscount2 = mysqli_num_rows($result2);
-                                    for ($j = 0; $j < $rowscount2; $j++)
-                                        $row2 = mysqli_fetch_row($result2);
-                                }
+                            $user_id = $row[7];
+                            if ($user_id != 0) {
+                                $sql2 = "SELECT * FROM user_table where user_id='$user_id'";
+                                $result2 = mysqli_query($Link, $sql2);
+                                $rowscount2 = mysqli_num_rows($result2);
+                                for ($j = 0; $j < $rowscount2; $j++)
+                                    $row2 = mysqli_fetch_row($result2);
+                            }
                         ?>
                         <li>
                             <a href="" title="">

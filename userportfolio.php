@@ -47,6 +47,8 @@ if ($_SESSION['email'] != null) {
 
     for ($i = 0; $i < $rowscount; $i++)
         $row = mysqli_fetch_row($result);
+
+    $user_id = $row[0];
 }
 ?>    
 
@@ -136,16 +138,16 @@ if ($_SESSION['email'] != null) {
                         <div class="subitem-title"><h4>|&ensp;更新個人資料</h4>&emsp;<h5>Update User Information</h5><h4>&ensp;|</h4></div>
                         <div class="updateuserinfo-content">
                             <ul id="updateuserinfolist">
-                                <div class="userpic-upload update">
-                                    <div class="userpic-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                <form enctype="multipart/form-data" name="form" method="post" action="userupdate_finish.php">
+                                    <div class="userpic-upload update">
+                                        <div class="userpic-edit">
+                                            <input type="file" id="imageUpload" name="upuserpic" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="userpic-preview">
+                                            <div id="imagePreview" style="background-image: url(images/syuan.jpg);"></div>
+                                        </div>
                                     </div>
-                                    <div class="userpic-preview">
-                                        <div id="imagePreview" style="background-image: url(images/syuan.jpg);"></div>
-                                    </div>
-                                </div>
-                                <form name="form" method="post" action="userupdate_finish.php">
                                     <li>
                                         <font class="uploadtitle">使用者名稱：</font>
                                         <input type="text" id="newusername-bar" name="upusername" value="<?php echo $row[1] ?>" required>
@@ -177,131 +179,32 @@ if ($_SESSION['email'] != null) {
         </div>
 
         <hr width="70%">
+
+<?php
+$sql2 = "SELECT * FROM portfolio_table where user_id='$user_id'";
+$result2 = mysqli_query($Link, $sql2);
+$rowscount2 = mysqli_num_rows($result2);
+
+// echo $user_id;
+?>
         
         <div id="managecontent">
             <div class="subitem-title"><h4>|&ensp;你的作品集</h4>&emsp;<h5>Portfolio</h5><h4>&ensp;|</h4></div>
             <div class="userportfolio-content" id="design-scrollbar">
                 <ul id="albums">
+                    <?php
+                    for ($i = 0; $i < $rowscount2; $i++) {
+                        $row2 = mysqli_fetch_row($result2);
+                    ?>
                     <li>
                         <a href="portcontent.php" title="">
                             <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
                             <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
                             <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
                         </a>
-                        <h5>Arcade Fire</h5>
+                        <h5><?php echo $row2[1] ?></h5>
                     </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                        </a>
-                        <h5>Movie Soundtracks</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                        </a>
-                        <h5>Viking Metal</h5>
-                    </li>
-                </ul>
-                <ul id="albums">
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                        </a>
-                        <h5>Arcade Fire</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                        </a>
-                        <h5>Movie Soundtracks</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                        </a>
-                        <h5>Viking Metal</h5>
-                    </li>
-                </ul>
-                <ul id="albums">
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                        </a>
-                        <h5>Arcade Fire</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                        </a>
-                        <h5>Movie Soundtracks</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                        </a>
-                        <h5>Viking Metal</h5>
-                    </li>
-                </ul>
-                <ul id="albums">
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                        </a>
-                        <h5>Arcade Fire</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                        </a>
-                        <h5>Movie Soundtracks</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/o4aqvyg" width="" height="" alt="" />
-                        </a>
-                        <h5>Viking Metal</h5>
-                    </li>
-                </ul>
-                <ul id="albums">
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                        </a>
-                        <h5>Arcade Fire</h5>
-                    </li>
-                    <li>
-                        <a href="" title="">
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/lmblcbt" width="" height="" alt="" />
-                        </a>
-                        <h5>Movie Soundtracks</h5>
-                    </li>
+                    <?php } ?>
                 </ul>
             </div>
             <!-- <div class="port-page">
@@ -312,7 +215,6 @@ if ($_SESSION['email'] != null) {
         </div>
         <a class="center-circle" href="upload.php" target="_blank">+</a>
     </div>
-
 
 
     <!-- ##### JAVASCRIPTS ##### -->

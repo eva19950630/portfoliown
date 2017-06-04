@@ -194,7 +194,7 @@ section {
 }
 
 #albums li {
-  padding: 55px 15px 0 15px;
+  padding: 55px 15px 0 5px;
   display: inline-block;
 }
 

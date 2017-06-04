@@ -55,8 +55,8 @@
 
 /*content: images*/
 .manageportcontent {
-	margin: 40px 0 50px 330px;
-	width: 60vw;
+	margin: 40px 0 50px 310px;
+	width: 65vw;
 	max-height: calc(140vh - 250px);
 	overflow-x: hidden;
 	overflow-y: auto;
