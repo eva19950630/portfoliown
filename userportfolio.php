@@ -145,7 +145,7 @@ if ($_SESSION['email'] != null) {
                                             <label for="imageUpload"></label>
                                         </div>
                                         <div class="userpic-preview">
-                                            <div id="imagePreview" style="background-image: url(images/syuan.jpg);"></div>
+                                            <div id="imagePreview" style="background-image: url(images/userpic_default.png);"></div>
                                         </div>
                                     </div>
                                     <li>
