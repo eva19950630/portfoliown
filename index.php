@@ -77,7 +77,12 @@ if ($_SESSION['email'] != null) {
 if ($_SESSION['email'] != null) {
     echo "<li class=\"afterlogin\">";
     echo "<a href=\"userportfolio.php\" id=\"link-userpic\">";
-    echo "<img src=\"images/syuan.jpg\" height=\"35\" width=\"35\" id=\"user-pic\">";
+
+    if ($row[6] != null)
+        echo '<img src="data:image/jpeg;base64,'.base64_encode($row[6]).'" height="35" width="35" id="user-pic"/>';
+    else
+        echo "<img src=\"images/userpic_default.png\" height=\"35\" width=\"35\" id=\"user-pic\">";
+
     echo "<font class=\"username\" style=\"margin: 0 0 0 10px;\">$row[1]</font>";
     echo "</a>";
     echo "</li>";

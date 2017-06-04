@@ -24,3 +24,4 @@ Stack trace:
 [04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fopen(): Filename cannot be empty in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 8
 [04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fread() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 9
 [04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 10
+[04-Jun-2017 21:59:25 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 106

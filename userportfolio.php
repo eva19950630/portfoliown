@@ -77,7 +77,15 @@ if ($_SESSION['email'] != null) {
                       <ul class="nav navbar-nav">
                         <li class="afterlogin">
                             <a href="userportfolio.php" id="link-userpic">
-                                <img src="images/syuan.jpg" height="35" width="35" id="user-pic">
+
+<?php
+if ($row[6] != null)
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row[6]).'" height="35" width="35" id="user-pic"/>';
+else
+    echo "<img src=\"images/userpic_default.png\" height=\"35\" width=\"35\" id=\"user-pic\">";
+?>
+                                <!-- <img src="data:image/jpeg;base64, <?php echo base64_encode($row[6]) ?>" height="35" width="35" id="user-pic"> -->
+
                                 <font class="username" style="margin: 0 0 0 5px;"><?php echo $row[1] ?></font>
                             </a>
                         </li>
@@ -98,7 +106,15 @@ if ($_SESSION['email'] != null) {
         <ul id="managetop">
             <li>
                 <div class="manage-image">
-                    <img src="images/syuan.jpg" height="160" width="160" id="user-pic">
+
+<?php
+if ($row[6] != null)
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row[6]).'" height="160" width="160" id="user-pic"/>';
+else
+    echo "<img src=\"images/userpic_default.png\" height=\"160\" width=\"160\" id=\"user-pic\">";
+?>
+
+                    <!-- <img src="data:image/jpeg;base64, <?php echo base64_encode($row[6]) ?>" height="160" width="160" id="user-pic"> -->
                     <!-- <div class="userpic-upload">
                         <div class="userpic-edit">
                             <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -145,7 +161,7 @@ if ($_SESSION['email'] != null) {
                                             <label for="imageUpload"></label>
                                         </div>
                                         <div class="userpic-preview">
-                                            <div id="imagePreview" style="background-image: url(images/userpic_default.png);"></div>
+                                            <div id="imagePreview" style="background-image: url(images/userpic_default.png)"></div>   
                                         </div>
                                     </div>
                                     <li>

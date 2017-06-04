@@ -84,7 +84,16 @@ if ($_SESSION['email'] != null) {
                       <ul class="nav navbar-nav">
                         <li class="afterlogin">
                             <a href="userportfolio.php" id="link-userpic">
-                                <img src="images/syuan.jpg" height="35" width="35" id="user-pic">
+
+<?php
+if ($row[6] != null)
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row[6]).'" height="35" width="35" id="user-pic"/>';
+else
+    echo "<img src=\"images/userpic_default.png\" height=\"35\" width=\"35\" id=\"user-pic\">";
+?>
+
+                                <!-- <img src="data:image/jpeg;base64, <?php echo base64_encode($row[6]) ?>" height="35" width="35" id="user-pic"> -->
+
                                 <font class="username" style="margin: 0 0 0 5px;"><?php echo $row[1] ?></font>
                             </a>
                         </li>
