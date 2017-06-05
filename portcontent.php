@@ -2,10 +2,9 @@
 session_start(); 
 include("db_connect.inc.php");
 
-// $newportid = $_SESSION['newportid'];
-// echo $newportid;
+// $port_id = $_SESSION['port_id'];
 
-// echo "<script type='text/javascript'>alert('$newportid');</script>";
+// echo "<script type='text/javascript'>alert('$port_id');</script>";
 
 ?>
 
@@ -85,7 +84,16 @@ if ($_SESSION['email'] != null) {
                       <ul class="nav navbar-nav">
                         <li class="afterlogin">
                             <a href="userportfolio.php" id="link-userpic">
-                                <img src="images/syuan.jpg" height="35" width="35" id="user-pic">
+
+<?php
+if ($row[6] != null)
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row[6]).'" height="35" width="35" id="user-pic"/>';
+else
+    echo "<img src=\"images/userpic_default.png\" height=\"35\" width=\"35\" id=\"user-pic\">";
+?>
+
+                                <!-- <img src="data:image/jpeg;base64, <?php echo base64_encode($row[6]) ?>" height="35" width="35" id="user-pic"> -->
+
                                 <font class="username" style="margin: 0 0 0 5px;"><?php echo $row[1] ?></font>
                             </a>
                         </li>
@@ -103,14 +111,19 @@ if ($_SESSION['email'] != null) {
     </nav>
 
 <?php
-$sql = "SELECT * FROM portfolio_table";
+// if ($_SESSION['port_id'] != null) {
+//     $port_id = $_SESSION['port_id'];
+//     echo $port_id;   
+// }
+$port_id = $_GET['port_id'];
+$sql = "SELECT * FROM portfolio_table where port_id='$port_id'";
 $result = mysqli_query($Link, $sql);
 $rowscount = mysqli_num_rows($result);
 
 for ($i = 0; $i < $rowscount; $i++) {
     $row = mysqli_fetch_row($result);
 
-    $user_id = $row[7];
+    $user_id = $row[8];
     if ($user_id != 0) {
         $sql2 = "SELECT * FROM user_table where user_id='$user_id'";
         $result2 = mysqli_query($Link, $sql2);
@@ -118,6 +131,15 @@ for ($i = 0; $i < $rowscount; $i++) {
         for ($j = 0; $j < $rowscount2; $j++)
             $row2 = mysqli_fetch_row($result2);
     }
+}
+
+$sql3 = "SELECT * FROM image_table where port_id='$port_id'";
+$result3 = mysqli_query($Link, $sql3);
+$rowscount3 = mysqli_num_rows($result3);
+
+for ($i = 0; $i < $rowscount3; $i++) {
+    $row3 = mysqli_fetch_row($result3);
+    $imageset[$i] = $row3;
 }
 ?>
 
@@ -127,9 +149,22 @@ for ($i = 0; $i < $rowscount; $i++) {
                 <ul id="albums" style="padding: 0px; margin: 10px 0 0 10px;">
                     <li>
                         <a href="" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+
+<?php
+if ($imageset[0][1] != null) {
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($imageset[0][1]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($imageset[0][1]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($imageset[0][1]).'" />';
+} else {
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+}  
+?>
+                            
+                            <!-- <img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                            <img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                            <img src="images/portfoliopic_default.png" width="" height="" alt="" /> -->
                         </a>
                         <h5 style="font-size: 20px; letter-spacing: 2px;"><?php echo $row[1] ?></h5>
                     </li>
@@ -153,208 +188,19 @@ for ($i = 0; $i < $rowscount; $i++) {
 
         <div class="manageportcontent" id="design-scrollbar">
             <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
+            <?php
+            for ($i = 0; $i < $rowscount3; $i++) {
+            ?>                             
+                <li>                  
+                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($imageset[$i][1]).'" />'; ?>
+                    <!-- <img src="images/uploadimagepic_default.png"> -->
                     <h5>
                         <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
+                            <?php echo $imageset[$i][2] ?>
                         &ensp;<font color="#932534"><b>|</b></font>
                     </h5>
                 </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-            </ul>
-            <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-            </ul>
-            <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-            </ul>
-            <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-            </ul>
-            <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-            </ul>
-            <ul id="portcontent-images">
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
-                <li>
-                    <img src="http://tinyurl.com/o4aqvyg">
-                    <h5>
-                        <font color="#932534"><b>|</b></font>&ensp;
-                            Arcade Fire
-                        &ensp;<font color="#932534"><b>|</b></font>
-                    </h5>
-                </li>
+            <?php } ?>
             </ul>
         </div>
         <a href="" id="click-addimages" class="center-circle" data-toggle="modal">+</a>

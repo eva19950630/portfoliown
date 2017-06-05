@@ -11,14 +11,21 @@ section {
 
 /*Introduction section*/
 .index-intro {
-	margin: 150px 0 0 0;
+	/*margin: 150px 0 0 0;*/
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
 }
 
 .index-intro .intro-slogan {
 	position: absolute;
 	top: 25%;
-	left: 20%;
 	width: 100%;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-align: center;
+
 }
 
 .index-intro .intro-btn {
@@ -31,9 +38,10 @@ section {
 
 .index-intro .intro-btn button {
   margin: 15px 0 0 0;
-  width: 250px;
-  height: 50px;
-  font-size: 17px;
+  width: 270px;
+  height: 55px;
+  font-size: 18px;
+  /*font-weight: 600;*/
   letter-spacing: 2px;
   background-color: #932534;
   color: #fff;
@@ -50,7 +58,7 @@ section {
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 
 
@@ -70,12 +78,12 @@ section {
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
    
-  border-right: 2.5px solid #222B31;
-  border-bottom: 2.5px solid #222B31;
+  border-right: 3px solid #222B31;
+  border-bottom: 3px solid #222B31;
   margin: 0 0 3px 4px;
   
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 .unu {
   margin-top: 1px;
@@ -155,14 +163,15 @@ section {
 
 .browse-title {
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   color: #932534;
 }
 
 .browse-title h2 {
   text-align: center;
   overflow: hidden;
-  font-size: 24px;
+  font-size: 28px;
+  /*font-weight: 600;*/
 }
 
 .browse-title h2 span {
@@ -206,8 +215,8 @@ section {
 }
   
 #albums img {
-  width: 100%;
-  height: auto;
+  width: 180px;
+  height: 180px;
   border: 1px solid rgba(255,255,255,0.5);
   position: absolute;
   top: 0;
@@ -294,7 +303,7 @@ section {
   padding: 5px 0 5px 0;
   text-align: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 1px;
   color: #222B31;
 }
@@ -302,7 +311,7 @@ section {
   display: inline;
   /*margin: 0 0 0 20px;*/
   padding: 0 0 0 20px;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   color: #AAA;
 }
