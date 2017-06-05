@@ -25,3 +25,14 @@ Stack trace:
 [04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fread() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 9
 [04-Jun-2017 19:37:45 Asia/Taipei] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in D:\TWAMPd\htdocs\portfoliown\userupdate_finish.php on line 10
 [04-Jun-2017 21:59:25 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in D:\TWAMPd\htdocs\portfoliown\userportfolio.php on line 106
+[05-Jun-2017 01:46:11 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting end of file in D:\TWAMPd\htdocs\portfoliown\portcontent.php on line 145
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 188
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 10:28:58 Asia/Taipei] PHP Warning:  mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in D:\TWAMPd\htdocs\portfoliown\index.php on line 201
+[05-Jun-2017 12:37:48 Asia/Taipei] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in D:\TWAMPd\htdocs\portfoliown\uploadport_finish.php on line 73

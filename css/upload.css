@@ -84,7 +84,7 @@ ul#uploadlist {
 .image-upload .image-edit input {
 	display: none;
 }
-.image-upload .image-edit input + label {
+.image-upload .image-edit label {
 	display: inline-block;
 	width: 34px;
 	height: 34px;
@@ -97,11 +97,11 @@ ul#uploadlist {
 	font-weight: normal;
 	transition: all 0.2s ease-in-out;
 }
-.image-upload .image-edit input + label:hover {
+.image-upload .image-edit label:hover {
 	background: #f1f1f1;
 	border-color: #d6d6d6;
 }
-.image-upload .image-edit input + label:after {
+.image-upload .image-edit label:after {
 	content: "\f040";
 	font-family: 'FontAwesome';
 	color: #757575;

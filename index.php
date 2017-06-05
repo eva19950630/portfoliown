@@ -160,7 +160,7 @@ if ($_SESSION['email'] != null) {
         <section class="section active" id="index-section" data-section="1">
             <div class="index-intro">
                 <div class="intro-slogan">
-                    Introduction
+                    －&emsp;Make Your Own Portfolio&emsp;－
                 </div>
                 <div class="intro-btn">
                     <button type="button" class="btn btn-default">開始製作你的作品集吧</button>
@@ -180,7 +180,7 @@ if ($_SESSION['email'] != null) {
         </section>
 
 <?php
-$sql = "SELECT * FROM portfolio_table";
+$sql = "SELECT * FROM portfolio_table order by port_id desc";
 $result = mysqli_query($Link, $sql);
 $rowscount = mysqli_num_rows($result);
 ?>
@@ -189,15 +189,15 @@ $rowscount = mysqli_num_rows($result);
         <section class="section" id="browse-section" data-section="2">
             <div class="index-browse">
                 <div class="browse-title">
-                    <h2><span>popular portfolio</span></h2>
+                    <h2><span>new portfolio</span></h2>
                 </div>
                 <div class="browse-rowalbums">
                     <ul id="albums" class="indexalbums">
-                        <?php 
-                        for ($i = 0; $i < 8; $i++) {
+                        <?php
+                        for ($i = 0; $i < $rowscount; $i++) {
                             $row = mysqli_fetch_row($result);
 
-                            $user_id = $row[7];
+                            $user_id = $row[8];
                             if ($user_id != 0) {
                                 $sql2 = "SELECT * FROM user_table where user_id='$user_id'";
                                 $result2 = mysqli_query($Link, $sql2);
@@ -205,16 +205,34 @@ $rowscount = mysqli_num_rows($result);
                                 for ($j = 0; $j < $rowscount2; $j++)
                                     $row2 = mysqli_fetch_row($result2);
                             }
+
+                            $port_id = $row[0];
+                            $sql3 = "SELECT * FROM image_table where port_id='$port_id'";
+                            $result3 = mysqli_query($Link, $sql3);
+                            $row3 = mysqli_fetch_row($result3);
                         ?>
                         <li>
-                            <a href="" title="">
-                                <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                                <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                                <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                            <a href="portcontent.php?port_id=<?php echo $row[0] ?>" title="">
+
+<?php
+if ($row3[1] != null) {
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row3[1]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row3[1]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row3[1]).'" />';
+} else {
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+}  
+?>
+
+                                <!-- img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                                <img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                                <img src="images/portfoliopic_default.png" width="" height="" alt="" /> -->
                             </a>
                             <h5><?php echo $row[1] ?></h5>
                             <h6>|&ensp;<?php echo $row2[1] ?>&ensp;|</h6>&emsp;
-                            <h6>|&ensp;<?php echo $row[6] ?> ★&ensp;|</h6>
+                            <h6>|&ensp;<?php echo $row[7] ?> ★&ensp;|</h6>
                         </li>
                         <?php } ?>
                     </ul><!-- end albums -->

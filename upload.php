@@ -114,7 +114,7 @@ else
         <div class="subitem-title"><h4>|&ensp;上傳新作品集</h4>&emsp;<h5>Upload new Portfolio</h5><h4>&ensp;|</h4></div>
         <div class="uploadport-content">
             <ul id="uploadlist">
-                <form name="form" method="get" action="uploadport_finish.php">
+                <form enctype="multipart/form-data" name="form" method="post" action="uploadport_finish.php">
                     <li>
                         <font class="uploadtitle">作品集名稱：</font>
                         <input type="text" id="newportname-bar" name="newportname" placeholder="輸入作品集名稱" required>
@@ -141,94 +141,94 @@ else
                             <div id="image-row">
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage1">
+                                        <input type="radio" name="portcover" value="pimage1">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="0"><input type="file" id="imageUpload" name="newportimage0" accept=".png, .jpg, .jpeg" data-id="0" /></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="0"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro0" placeholder="輸入照片描述" required>
                                     </div>
                                 </div>
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage2">
+                                        <input type="radio" name="portcover" value="pimage2">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="1"><input type="file" id="imageUpload" name="newportimage1" accept=".png, .jpg, .jpeg" data-id="1"/></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="1"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro1" placeholder="輸入照片描述">
                                     </div>
                                 </div>
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage3">
+                                        <input type="radio" name="portcover" value="pimage3">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="2"><input type="file" id="imageUpload" name="newportimage2" accept=".png, .jpg, .jpeg" data-id="2"/></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="2"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro2" placeholder="輸入照片描述">
                                     </div>
                                 </div>
                             </div>
                             <div id="image-row">
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage4">
+                                        <input type="radio" name="portcover" value="pimage4">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="3"><input type="file" id="imageUpload" name="newportimage3" accept=".png, .jpg, .jpeg" data-id="3"/></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="3"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro3" placeholder="輸入照片描述">
                                     </div>
                                 </div>
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage5">
+                                        <input type="radio" name="portcover" value="pimage5">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="4"><input type="file" id="imageUpload" name="newportimage4" accept=".png, .jpg, .jpeg" data-id="4"/></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="4"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro4" placeholder="輸入照片描述">
                                     </div>
                                 </div>
                                 <div class="image-upload">
                                     <div class="image-choose">
-                                        <input type="radio" name="portimage" value="pimage6">
+                                        <input type="radio" name="portcover" value="pimage6">
                                     </div>
                                     <div class="image-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                        <label for="imageUpload"></label>
+                                        
+                                        <label data-id="5"><input type="file" id="imageUpload" name="newportimage5" accept=".png, .jpg, .jpeg" data-id="5"/></label>
                                     </div>
                                     <div class="image-preview">
-                                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);"></div>
+                                        <div id="imagePreview" class="imgUpload" style="background-image: url(images/uploadimagepic_default.png);" data-id="5"></div>
                                     </div>
                                     <div class="image-intro">
-                                        <input type="text" id="newimageintro-bar" placeholder="輸入照片描述">
+                                        <input type="text" id="newimageintro-bar" name="newportimageintro5" placeholder="輸入照片描述">
                                     </div>
                                 </div>
                             </div>

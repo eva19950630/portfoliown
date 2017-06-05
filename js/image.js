@@ -3,15 +3,34 @@ function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
-            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
-            $('#imagePreview').hide();
-            $('#imagePreview').fadeIn(650);
+            console.log("input",input);
+            var imagePreviewid = $('.imgUpload[data-id='+$(input).attr("data-id")+']');
+            console.log("lll", $('.imgUpload[data-id='+$(input).attr("data-id")+']'));
+            imagePreviewid.css('background-image', 'url('+e.target.result +')');
+            imagePreviewid.hide();
+            imagePreviewid.fadeIn(650);
         }
         reader.readAsDataURL(input.files[0]);
     }
 }
-$("#imageUpload").change(function() {
+$("input[name^='newportimage']").on("change",function() {
     readURL(this);
+});
+
+function readURL2(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var imagePreviewid = $('#imagePreview');
+            imagePreviewid.css('background-image', 'url('+e.target.result +')');
+            imagePreviewid.hide();
+            imagePreviewid.fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("input[name='upuserpic']").on("change",function() {
+    readURL2(this);
 });
 
 

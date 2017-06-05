@@ -161,7 +161,15 @@ else
                                             <label for="imageUpload"></label>
                                         </div>
                                         <div class="userpic-preview">
-                                            <div id="imagePreview" style="background-image: url(images/userpic_default.png)"></div>   
+
+<?php
+if ($row[6] != null)
+    echo '<div id="imagePreview" style="background-image: url(data:image/jpeg;base64,'.base64_encode($row[6]).')"></div>';
+else
+    echo "<div id=\"imagePreview\" style=\"background-image: url(images/userpic_default.png)\"></div>";
+?>
+
+                                            <!-- <div id="imagePreview" style="background-image: url(images/userpic_default.png)"></div>    -->
                                         </div>
                                     </div>
                                     <li>
@@ -197,6 +205,7 @@ else
         <hr width="70%">
 
 <?php
+
 $sql2 = "SELECT * FROM portfolio_table where user_id='$user_id'";
 $result2 = mysqli_query($Link, $sql2);
 $rowscount2 = mysqli_num_rows($result2);
@@ -213,10 +222,23 @@ $rowscount2 = mysqli_num_rows($result2);
                         $row2 = mysqli_fetch_row($result2);
                     ?>
                     <li>
-                        <a href="portcontent.php" title="">
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
-                            <img src="http://tinyurl.com/ojco2eh" width="" height="" alt="" />
+                        <a href="portcontent.php?port_id=<?php echo $row2[0] ?>" title="">
+
+<?php
+if ($row2[5] != null) {
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row2[5]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row2[5]).'" />';
+    echo '<img src="data:image/jpeg;base64,'.base64_encode($row2[5]).'" />';
+} else {
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+    echo "<img src=\"images/portfoliopic_default.png\" >";
+}  
+?>
+                       
+                            <!-- <img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                            <img src="images/portfoliopic_default.png" width="" height="" alt="" />
+                            <img src="images/portfoliopic_default.png" width="" height="" alt="" /> -->
                         </a>
                         <h5><?php echo $row2[1] ?></h5>
                     </li>
